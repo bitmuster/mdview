@@ -5,19 +5,21 @@ for changes and displays updates as the file is saved. The markdown is
 displayed as an HTML page in a python-gtk based webkit viewer.
 
 ### Requirements
-The following python dependencies:
+The following python3 dependencies:
 
 - watchdog - for cross-platform monitoring of files for change
 (inotify etc)
 - webkit - for displaying HTML
-- gtk2
+- gtk3
 
-These can be installed on Ubunu:
+These can be installed on Debian/Ubunu:
 ```
-sudo easy_install watchdog
-sudo apt-get install python-webkit
-sudo apt-get install python-gtk2
+sudo apt-get install python3-watchdog
+sudo apt-get install libwebkitgtk-3.0-0
+sudo apt-get install gir1.2-webkit-3.0
+sudo apt-get install markdown
 ```
+
 
 or on Mac OS X (macports):
 
