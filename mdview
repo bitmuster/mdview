@@ -72,7 +72,9 @@ class MDViewer(FileSystemEventHandler, Gtk.Window):
     
     def create_md(self):
         md = subprocess.check_output(["markdown",self.file_name])
-        return md
+        decoded = md.decode(encoding="utf-8", errors="strict")
+        return decoded
+
     
 if __name__ == "__main__":
     if len(sys.argv) != 2:
