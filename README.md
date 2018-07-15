@@ -8,27 +8,24 @@ displayed as an HTML page in a python-gtk based webkit viewer.
 The following python3 dependencies:
 
 - watchdog - for cross-platform monitoring of files for change
-(inotify etc)
+    (inotify etc)
 - webkit - for displaying HTML
 - gtk3
 
 These can be installed on Debian/Ubunu:
-```
-sudo apt-get install python3-watchdog
-sudo apt-get install libwebkitgtk-3.0-0
-sudo apt-get install gir1.2-webkit-3.0
-sudo apt-get install markdown
-```
 
+
+    sudo apt-get install python3-watchdog
+    sudo apt-get install libwebkitgtk-3.0-0
+    sudo apt-get install gir1.2-webkit-3.0
+    sudo apt-get install markdown
 
 or on Mac OS X (macports):
 
-```
-sudo easy_install watchdog
-sudo port install py27-gtk
-sudo port install py27-webkitgtk
-```
 
+    sudo easy_install watchdog
+    sudo port install py27-gtk
+    sudo port install py27-webkitgtk
 
 To use GitHub markdown:
 
@@ -36,7 +33,8 @@ A markdown processor is also required. I use
 [this one](https://gist.github.com/ralph/1300939).
 
 ### Usage
-./mdview markdownfile.md
+
+    ./mdview markdownfile.md
 
 ### To do
 - Syntax colouring / GitHub style sheets
