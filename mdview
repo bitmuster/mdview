@@ -73,10 +73,10 @@ class MDViewer(FileSystemEventHandler, gtk.Window):
     
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print "Need the file as an argument"
+        print("Need the file as an argument")
         sys.exit(1)
     if not os.path.isfile(sys.argv[1]):
-        print "Must supply file."
+        print("Must supply file.")
         sys.exit(1)
     s = MDViewer(sys.argv[1])
     
