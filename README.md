@@ -37,6 +37,9 @@ A markdown processor is also required. I use
     ./mdview markdownfile.md
 
 ### To do
+
+- DONE Fix linebreak \n chars in viewer
+- DONE Html check of output
 - Syntax colouring / GitHub style sheets
 - Support links
 - Faster updating (don't use glib idle to avoid thread issue)
