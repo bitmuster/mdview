@@ -52,7 +52,7 @@ class MDViewer(FileSystemEventHandler, Gtk.Window):
         html += """<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>"""
         html += """<title>Your Markdown Document</title></head>"""
         html += """<body>{}</body></html>""".format(md)
-        self.dump_to_file(html)
+        #self.dump_to_file(html)
         GLib.idle_add(self.load_html, html)
         
     def on_loaded_html(self):
