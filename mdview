@@ -33,8 +33,7 @@ class MDViewer(FileSystemEventHandler, Gtk.Window):
         self.add(self.sw)
         
         self.update()
-        self.connect("destroy", self.on_quit)
-
+        self.connect("destroy", Gtk.main_quit)
         
     def start(self):
         self.observer.start()
