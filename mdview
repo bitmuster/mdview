@@ -48,6 +48,7 @@ class MDViewer(FileSystemEventHandler, Gtk.Window):
     def update(self):
         md = self.create_md()
         html = "<html><head></head><body>{}</body></html>".format(md)
+        self.dump_to_file(html)
         GLib.idle_add(self.load_html, html)
         
     def on_loaded_html(self):
@@ -75,6 +76,9 @@ class MDViewer(FileSystemEventHandler, Gtk.Window):
         decoded = md.decode(encoding="utf-8", errors="strict")
         return decoded
 
+    def dump_to_file(self, text):
+        with open('dump.html','w') as f:
+            f.write(text)
     
 if __name__ == "__main__":
     if len(sys.argv) != 2:
